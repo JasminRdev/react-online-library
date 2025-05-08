@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    top:0;
+    
+    z-index: 9;
+}
+
+nav .links, nav>div{
+    gap: 15px;
+    display: flex;
+}
+
+.links *:hover {
+    color: gray;
+}
+.links *{
+    padding: 10px 15px;
+    color:#fff;
+    
+}

@@ -1,0 +1,155 @@
+.fav-btn{
+    padding: 6px 8px;
+    background: inherit;
+    border: none;
+}
+
+.fav-btn svg{
+    height:20px;
+    width: 15px;
+}
+.fav-btn svg path{
+    fill:white;
+}
+
+.fav--active svg path{
+    fill:#000;
+}
+.movies-grid {
+    display: grid;
+    gap: 30px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 15px 30px;
+}
+.movie-card {
+    display: grid;
+    position: relative;
+    padding:30px 10px 0 10px;
+    border-radius: 2px;
+    height: fit-content;
+}
+.movie-card:not(.modal-open):hover  {
+    opacity: .9;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.205);
+}
+
+.movie-info h4{
+    padding-top:7px;
+}
+
+.notes-btn{
+    display: flex;
+    gap:5px;
+    padding-top:10px;
+    justify-content: center;
+
+}
+
+.del-note{
+    background-color: rgba(108, 108, 108, 0.821);
+}
+
+img {
+    height: 200px;
+    object-fit: cover;
+}
+.movie-overlay {
+    display: grid;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.movie-overlay:hover {
+    opacity: .8;
+}
+
+.movie-overlay:active {
+    opacity: .6;
+}
+
+.movie-polster {
+    margin: 0 auto;
+}
+
+.movie-info {
+    height: 85px;
+    text-align: center;
+}
+
+.movie-info h4 {
+    margin: auto;
+}
+
+
+
+.close-note{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    cursor: pointer;
+}
+.close-note:hover{
+    opacity: .8;
+}
+.close-note:active{
+    opacity: .6;
+}
+
+.note-modal{
+    display: grid;
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    top:50%;
+    transform: translateY(-50%);
+    margin-inline: auto; 
+    width: fit-content;
+    z-index: 9999;
+    background-color: rgb(44, 90, 216);
+    padding:20px 15px 50px 15px;
+    border-radius: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.note-form{
+    display: grid;
+    gap:5px;
+    padding:30px 50px 0 50px;
+    justify-content: center;
+}
+.note-form textarea{
+    border:none;
+    padding:5px 10px;
+    border-radius: 4px;
+}
+.note-modal h2,.note-modal h4{
+    display: flex;
+    justify-content: center;
+    margin:10px 0;
+    padding: 0;
+}
+.movie-card{
+    background: rgb(80, 80, 80);
+}
+.movie-card.popup--active{
+    opacity: .4;
+}
+
+.note-btn{
+    background: transparent;
+}
+.note-btn:hover{
+    opacity: .8;
+}
+.note-btn:active{
+    opacity: .6;
+}
+.note-btn svg path{
+    fill:#fff;
+}
+
+.note-btn.note--exist svg path{
+    fill:rgb(63, 151, 63);
+}
+

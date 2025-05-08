@@ -1,0 +1,38 @@
+.home {
+    margin: 40px auto;
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+}
+
+form.search-form{
+    position: fixed;
+    display: flex;
+    gap: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 42px;
+    
+    z-index: 99;
+}
+
+.search-form input{
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    padding: 0 10px;
+    width: 230px;
+    color: black;
+}
+
+button.search-btn{
+    background-color: #4e4ede;
+}
+
+button.search-btn:hover {
+    opacity: .8;
+}
+
+button.search-btn:active {
+    opacity: .6;
+}

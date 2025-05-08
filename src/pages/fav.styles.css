@@ -1,0 +1,14 @@
+h2 {
+    display: flex;
+    justify-content: center;
+}
+.fav-container{
+    display: grid;
+    gap:10px;
+    justify-content: center;
+    padding:100px 0;
+}
+.fav-container *{
+    justify-content: center;
+    display: flex;
+}
