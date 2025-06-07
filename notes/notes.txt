@@ -1,0 +1,24 @@
+todo:
+
+current: 
+
+future todo :   
+    - not always descr or other infos availible on overlay descriptions (moviecart.jsx) - fix
+
+
+
+Details:
+    -add
+        - home or also fav -> cat with genres
+        - home -> pagninations to allow more results (up to 1000 -> code fundament in pagnination.js)
+        - all pages -> scroll up btn 
+            
+
+done:
+    - responsive for desktop, tablet, mobile
+    - fixed horizontal scroll twitching
+    - when opening the descr -> fix to see only the one we opened, or hide with bg completly 
+            -need the state one higher (home?) to give the parameter to show only the clicked movie desc
+    -fixes
+        - sometimes no pics -> only show item when all infos are there
+   - home -> click on book opens overlay of descriptions

@@ -1,7 +1,11 @@
+
 .fav-btn{
-    padding: 6px 8px;
-    background: inherit;
+    background-color: inherit;
     border: none;
+    padding: 5px 8px 2px 8px;
+}
+.fav-btn.at-home{
+    background: #a5a5a5;
 }
 
 .fav-btn svg{
@@ -21,6 +25,16 @@
     grid-template-columns: repeat(5, 1fr);
     margin: 15px 30px;
 }
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: #000000b8;
+    width: 100vw;
+    height: 100vh;
+}
 .movie-card {
     display: grid;
     position: relative;
@@ -29,7 +43,6 @@
     height: fit-content;
 }
 .movie-card:not(.modal-open):hover  {
-    opacity: .9;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.205);
 }
@@ -83,16 +96,27 @@ img {
 
 
 
-.close-note{
+.close-note, .close{
     position: absolute;
     top: 10px;
     right: 10px;
     height: 40px;
     cursor: pointer;
 }
+
+.close path{
+    fill:white;
+}
+
+.close {
+    top:30px;
+    right:30px;
+}
+
 .close-note:hover{
     opacity: .8;
 }
+
 .close-note:active{
     opacity: .6;
 }
@@ -138,6 +162,7 @@ img {
 
 .note-btn{
     background: transparent;
+    padding: 8px 5px 2px 5px;
 }
 .note-btn:hover{
     opacity: .8;
@@ -153,3 +178,81 @@ img {
     fill:rgb(63, 151, 63);
 }
 
+.info {
+    display: grid;
+    width: 100%;
+    padding: 50px 70px;
+    background: #000000bf;
+    
+}
+.info p{
+    background: #000;
+    width: fit-content;
+    padding: 10px;
+    margin: 5px;
+}
+
+.info-heading{
+    display: grid;
+    justify-content: center;
+}
+
+.open-descr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.open-descr:hover{
+    opacity: 1;
+    background-color: #0000006b;
+}
+
+.no-image{
+    width: 141px !important;
+
+}
+
+@media (max-width: 865px) {
+    .movies-grid{
+        gap: 20px 10px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .movie-overlay {
+        top: 7px;
+        right: 4px;
+    }
+    form.search-form {
+        justify-content: center !important;
+        transform: translate(0%, -0%) !important;
+        position: static !important;
+        z-index: 0 !important;
+        margin-bottom: 20px;
+    }
+  }
+
+  
+
+@media (max-width: 720px) {
+    .movies-grid{
+        gap: 10px 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .movie-overlay {
+        top: 10px;
+        right: 7px;
+    }
+  }
+
+  @media (max-width: 540px) {
+      .movies-grid{
+          gap: 7px 7px;
+          grid-template-columns: repeat(2, 1fr);
+      }
+      .info {
+        padding: 0 30px;
+    }
+    }

@@ -5,11 +5,15 @@ const MovieContext = createContext()
 export const useMovieContext = () => useContext(MovieContext)
 export const MovieProvider = ({children}) => {
     const [fav, setFav] = useState([])
+    const [clickedBook, setClickedBook] = useState([])
     const [notes, setNotes] = useState([])
    
     useEffect(() => {
         const storedFavs = localStorage.getItem("fav");
         if(storedFavs) setFav(JSON.parse(storedFavs))
+            
+        const storedClickedBook = localStorage.getItem("clickedBook");
+        if(storedClickedBook) setClickedBook(JSON.parse(storedClickedBook))
             
         const storedNotes = localStorage.getItem("notes");
         if(storedNotes) setNotes(JSON.parse(storedNotes))
@@ -18,6 +22,9 @@ export const MovieProvider = ({children}) => {
     useEffect(() => {
         localStorage.setItem("fav", JSON.stringify(fav))
     },[fav])
+    useEffect(() => {
+        localStorage.setItem("clickedBook", JSON.stringify(clickedBook))
+    },[clickedBook])
     
     useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
@@ -26,6 +33,10 @@ export const MovieProvider = ({children}) => {
     const addFav = (movie) => {
         setFav(prev => [...prev, movie])
     }
+    
+    const addClickedBook = (movie) => {
+        setClickedBook(prev => [...prev, movie])
+    }
 
     const removeFav = (movieId) => {
         setFav(prev => prev.filter(movie => movie.id !== movieId))
@@ -33,6 +44,9 @@ export const MovieProvider = ({children}) => {
 
     const isFav = (movieId) => {
         return fav.some(movie => movie.id === movieId)
+    }
+    const isClickedBook = (bookId) => {
+        return clickedBook.some(book => book.id === bookId)
     }
 
     //notes
@@ -59,9 +73,12 @@ export const MovieProvider = ({children}) => {
 
     const value = {
         fav, 
+        clickedBook,
         addFav,
+        addClickedBook,
         removeFav,
         isFav,
+        isClickedBook,
         notes,
         removeNote,
         addNote,

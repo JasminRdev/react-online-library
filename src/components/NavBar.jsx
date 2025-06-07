@@ -20,7 +20,7 @@ function NavBar() {
 
         <nav>
             <div>
-                <Link to="/">Movie App</Link>
+                <Link to="/">Book App</Link>
             </div>
             
             <div className="links">
