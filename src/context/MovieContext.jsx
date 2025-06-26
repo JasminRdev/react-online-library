@@ -35,7 +35,7 @@ export const MovieProvider = ({children}) => {
     }
     
     const addClickedBook = (movie) => {
-        setClickedBook(prev => [...prev, movie])
+        setClickedBook([movie])
     }
 
     const removeFav = (movieId) => {
