@@ -5,7 +5,9 @@ current:
 future todo :   
     - not always descr or other infos availible on overlay descriptions (moviecart.jsx) - fix
 
-
+bugs:
+    - not only the last clicked book gets to show description, all every clicked ones -> show only the last clicked one or remove when we clicked X the clicked state
+        - prob both, for double click faster than code fixes
 
 Details:
     -add
